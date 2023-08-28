@@ -1,10 +1,9 @@
 import React from "react";
+import "./css/TodoItem.css";
 
-const TodoItem = ({ todoListItem }) => {
+const TodoItem = ({ text }) => {
     return (
-        <>
-            <li className="todoItem">{todoListItem}</li>;
-        </>
+        <li className="todoItem">{text}</li>
     )
 };
 
