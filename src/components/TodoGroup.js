@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoGroup.css";
+import "./css/TodoGroup.css";
 
 const TodoGroup = ({ todos }) => {
     return (

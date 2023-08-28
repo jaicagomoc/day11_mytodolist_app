@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from "react"; 
 import TodoGroup from './components/TodoGroup'
+import TodoGenerator from "./components/TodoGenerator";
 
 function App() {
-  const todoListItem = ["To finish homework", "To review for tomorrow", "To revisit some topics"];
+  const [todos, setTodos] = useState([
+    "To finish homework",
+    "To review for tomorrow",
+    "To revisit some topics"
+  ]);
+
+  const addTodo = (newTodo) => {
+    setTodos([...todos, newTodo]);
+  };
   return (
     <>
       <h2 className="title"> Todo List</h2>
-      <TodoGroup todos={todoListItem} />
+      <TodoGroup todos={todos}/>
+      <TodoGenerator todos={addTodo} />
     </>
 
   );

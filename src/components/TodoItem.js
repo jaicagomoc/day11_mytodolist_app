@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoItem.css";
+import "./css/TodoItem.css";
 
 const TodoItem = ({ todoListItem }) => {
     return (
