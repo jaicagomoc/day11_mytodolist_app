@@ -5,7 +5,7 @@
 
 .todo-item {
     border: 1px solid #ccc;
-    list-style-type: none;
+    list-style-type: none; 
     padding: 10px;
     margin: 20px auto;
     border-radius: 5px;

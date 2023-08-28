@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/TodoGenerator.css"
 
 const TodoGenerator = ({ addTodo }) => {
     const [newTodo, setNewTodo] = useState("");
