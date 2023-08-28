@@ -1,11 +1,12 @@
 import React from "react";
 import "./css/TodoGroup.css";
+import TodoItem from "./TodoItem";
 
 const TodoGroup = ({ todos }) => {
     return (
-        <ul className="todo-group">
+        <ul className="todoGroup">
             {todos.map((todo, index) => (
-                <li className="todo-item" key={index}>{todo}</li>
+                <li className="todoItem" key={index}>{todo}</li>
             ))}
         </ul>
     );

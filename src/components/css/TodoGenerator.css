@@ -1,11 +1,11 @@
-.todo-generator {
+.todoGenerator {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.todo-generator input {
+.todoGenerator input {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   max-width: 700px;
 }
 
-.todo-generator button {
+.todoGenerator button {
   padding: 8px 16px;
   background-color: #007bff;
   color: white;
@@ -23,6 +23,6 @@
   transition: background-color 0.2s;
 }
 
-.todo-generator button:hover {
+.todoGenerator button:hover {
   background-color: #0056b3;
 }
