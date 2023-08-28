@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
+import "./css/TodoList.css";
 
 const TodoList = () => {
     const [todos, setTodos] = useState([
