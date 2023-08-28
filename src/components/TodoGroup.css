@@ -1,0 +1,17 @@
+.todo-group {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: 700px;
+}

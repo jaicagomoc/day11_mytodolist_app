@@ -1,10 +1,15 @@
 import React from 'react'
-import TodoItem from './components/TodoItem'
+import TodoGroup from './components/TodoGroup'
 
 function App() {
+  const todoListItem = ["To finish homework", "To review for tomorrow", "To revisit some topics"];
   return (
-    <TodoItem/>
-  )
+    <>
+      <h2 className="title"> Todo List</h2>
+      <TodoGroup todos={todoListItem} />
+    </>
+
+  );
 }
 
-export default App
+export default App;

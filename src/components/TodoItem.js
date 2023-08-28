@@ -1,11 +1,10 @@
 import React from "react";
-import"./TodoItem.css";
+import "./TodoItem.css";
 
-const TodoItem = () => {
+const TodoItem = ({ todoListItem }) => {
     return (
         <>
-        <h2 className="title"> Todo List</h2>
-        <li className="todo-item">{"To finish the homework"}</li>;
+            <li className="todo-item">{todoListItem}</li>;
         </>
     )
 };
