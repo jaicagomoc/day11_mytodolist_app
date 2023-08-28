@@ -9,7 +9,6 @@
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
-  max-width: 700px;
 }
 
 .todoGenerator button {
@@ -19,9 +18,8 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
-.todoenerator button:hover {
+.todoGenerator button:hover {
   background-color: #0056b3;
 }
