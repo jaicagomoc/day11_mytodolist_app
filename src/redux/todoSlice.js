@@ -13,7 +13,7 @@ const todoSlice = createSlice({
                 text: action.payload.text,
                 done: false,
             };
-            return [...state, newTodo];
+            state.push(newTodo);
         },
     },
 });
