@@ -4,22 +4,24 @@ import TodoGenerator from "./TodoGenerator";
 import "./css/TodoList.css";
 
 const TodoList = () => {
-    const [todos, setTodos] = useState([
-        "To finish homework",
-        "To review for tomorrow",
-        "To revisit some topics"
-    ]);
+//     const [todos, setTodos] = useState([
+//         "To finish homework",
+//         "To review for tomorrow",
+//         "To revisit some topics"
+//     ]);
 
-    const addTodo = (newTodo) => {
-        setTodos([...todos, newTodo]);
-    };
+//     const addTodo = (newTodo) => {
+//         setTodos([...todos, newTodo]);
+//     };
+const todoList = useSelector((state) => state.Todo.todoList);
+
 
     return (
         <div className="todoListContainer">
             <h2 className="todoListTitle"> Todo List</h2>
             <div className="todoListComponents">
-                <TodoGroup todos={todos} />
-                <TodoGenerator addTodo={addTodo} />
+                <TodoGroup todoList={todoList} />
+                <TodoGenerator />
             </div>
         </div>
     );
