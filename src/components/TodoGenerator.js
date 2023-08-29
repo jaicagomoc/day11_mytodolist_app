@@ -13,7 +13,7 @@ const TodoGenerator = () => {
 
     const handleAddTodo = () => {
         if (newTodo.trim() !== "") {
-            dispatch(updateTodoList({ text: newTodo }))
+            dispatch(updateTodoList({text: newTodo }));
             setNewTodo("");
         }
     };

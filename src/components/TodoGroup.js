@@ -5,8 +5,8 @@ import TodoItem from "./TodoItem";
 const TodoGroup = ({ todos }) => {
     return (
         <ul className="todoGroup">
-            {todos.map((todo, index) => (
-                <TodoItem key={index} displayInput={todo} />
+            {todos.map((todo) => (
+                <TodoItem key={todo.id}  todo={todo} />
             ))}
         </ul>
     );

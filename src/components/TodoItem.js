@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/TodoItem.css";
 
-const TodoItem = ({ displayInput }) => {
+const TodoItem = ({ todo }) => {
     return (
-        <li className="todoItem">{displayInput}</li>
+        <li className="todoItem">{todo.text}</li>
     )
 };
 

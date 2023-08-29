@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
-    name: "Todos",
+    name: "todoList",
     initialState: [
-        { id: 1, text: "display your input todo ", done: false },
-        { id: 2, text: "To finish the homework", done: false },
+        { id: 1, text: "To finish the homework", done: false },
     ],
     reducers: {
         updateTodoList: (state, action) => {
+            const id = state.length + 1;
             const newTodo = {
-                id: state.length + 1,
-                text: action.payload,
+                id: id,
+                text: action.payload.text,
                 done: false,
             };
-            state.push(newTodo);
+            return [...state, newTodo];
         },
     },
 });
