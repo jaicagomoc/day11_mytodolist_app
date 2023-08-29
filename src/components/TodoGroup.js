@@ -6,7 +6,7 @@ const TodoGroup = ({ todos }) => {
     return (
         <ul className="todoGroup">
             {todos.map((todo, index) => (
-                <TodoItem key={index} text={todo}/>
+                <TodoItem key={index} displayInput={todo}/>
             ))}
         </ul>
     );
