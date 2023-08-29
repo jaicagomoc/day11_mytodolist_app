@@ -1,24 +1,23 @@
-import { useDispatch } from "react-redux";
-import { updateTodoList } from "./todoSlice";
+import React, { useState } from "react";
 import "./css/TodoGenerator.css"
-import { useState } from "react";
 
-const TodoGenerator = () => {
-    const dispatch = useDispatch()
-    const [newTodo, setNewTodo] = useState(" ");
+const TodoGenerator = ({ addTodo }) => {
+    const [newTodo, setNewTodo] = useState("");
 
     const handleInputChange = (event) => {
-        dispatch(updateTodoList(event.target.value))
-    };
-    const handleAddTodo = () =>{
-        dispatch(updateTodoList({}))
+        setNewTodo(event.target.value);
     };
 
-
+    const handleAddTodo = () => {
+        if (newTodo.trim() !== "") {
+            addTodo(newTodo);
+            setNewTodo("");
+        }
+    };
 
     return (
         <div className="todoGenerator">
-            <input type="text" onChange={handleInputChange}
+            <input type="text" value={newTodo} onChange={handleInputChange}
                 placeholder="Enter a new todo" />
             <button onClick={handleAddTodo}>Add Todo</button>
         </div>
