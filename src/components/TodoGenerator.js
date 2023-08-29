@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./css/TodoGenerator.css"
+import { useDispatch } from "react-redux";
+import { updateTodoList } from "../redux/todoSlice";
 
-const TodoGenerator = ({ addTodo }) => {
+const TodoGenerator = () => {
     const [newTodo, setNewTodo] = useState("");
+    const dispatch = useDispatch();
 
     const handleInputChange = (event) => {
         setNewTodo(event.target.value);
@@ -10,7 +13,7 @@ const TodoGenerator = ({ addTodo }) => {
 
     const handleAddTodo = () => {
         if (newTodo.trim() !== "") {
-            addTodo(newTodo);
+            dispatch(updateTodoList({ text: newTodo }))
             setNewTodo("");
         }
     };
