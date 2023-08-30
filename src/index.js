@@ -1,4 +1,4 @@
-import React ,{Children} from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,12 +8,14 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelpPage } from './pages/HelpPage';
 import TodoList from './components/TodoList';
 import TodoItemDetail from './components/TodoItemDetails';
+import ErrorPage from './pages/ErrorPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -21,18 +23,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/done",
-        element: <TodoList isDone ={true}/>
+        element: <TodoList isDone={true} />
       },
       {
         path: "/done/:id",
-        element: <TodoItemDetail/>
+        element: <TodoItemDetail />
       },
       {
         path: "/help",
         element: <HelpPage />
       }
-
     ]
+    
   }
   
 ])
