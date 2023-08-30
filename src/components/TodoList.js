@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { resetTodoList } from "../redux/todoSlice";
 import { getTodoTasks } from "../api/todoApi"; 
 
-const TodoList = () => {
+const TodoList = (props) => {
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todoList.task);
 
@@ -24,7 +24,7 @@ const TodoList = () => {
             <h2 className="todoListTitle"> Todo List</h2>
             <div className="todoListComponents">
                 <TodoGroup todos={todos} />
-                <TodoGenerator />
+                {!props.isDone &&<TodoGenerator />}
             </div>
         </div>
     );

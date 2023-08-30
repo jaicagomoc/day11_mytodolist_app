@@ -3,6 +3,7 @@ import "./css/TodoGroup.css";
 import TodoItem from "./TodoItem";
 
 const TodoGroup = ({ todos }) => {
+    const filteredTodos = todos.isDone ? todos.filter(task => task.done) : todos;
     return (
         <ul className="todoGroup">
             {todos.map((todotask) => (
