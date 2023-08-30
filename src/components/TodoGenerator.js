@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/TodoGenerator.css"
 import { useDispatch } from "react-redux";
 import { updateTodoList } from "../redux/todoSlice";
-import { store } from '../app/store'; 
 const TodoGenerator = () => {
     const [newTodo, setNewTodo] = useState("");
     const dispatch = useDispatch();
