@@ -4,8 +4,6 @@ import TodoGenerator from "./TodoGenerator";
 import "./css/TodoList.css";
 import { useSelector } from "react-redux";
 
-
-
 const TodoList = (props) => {
     const todos = useSelector((state) => state.todoList);
     return (

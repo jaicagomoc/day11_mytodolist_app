@@ -7,27 +7,27 @@ const TodoItem = ({ todo }) => {
     const dispatch = useDispatch();
 
     const handleToggleDone = () => {
-        if(todo.isDone){
+        if (todo.isDone) {
             console.log("go to detail page");
-        }else{
-            dispatch(toggleTodoStatus(todo.task.id));
+        } else {
+            dispatch(toggleTodoStatus(todo.id));
         }
     };
 
     const todoStyle = {
-        textDecoration: todo.task.done ? "line-through" : "none",
+        textDecoration: todo.done ? "line-through" : "none",
     };
 
     const handleDeleteTodo = () => {
         const confirmDelete = window.confirm("Are you sure you want to delete todo?");
         if (confirmDelete) {
-            dispatch(deleteTodoList(todo.task.id));
+            dispatch(deleteTodoList(todo.id));
         }
     };
 
     return (
         <li className="todoItem" style={todoStyle}>
-            <span onClick={handleToggleDone}>{todo.task.text}</span>
+            <span onClick={handleToggleDone}>{todo.text}</span>
             <button className="deleteButton" onClick={handleDeleteTodo}> x </button>
         </li>
     );
