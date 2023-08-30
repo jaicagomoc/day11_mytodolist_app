@@ -11,10 +11,8 @@ const TodoList = () => {
     const todos = useSelector((state) => state.todoList.task);
 
     useEffect(() => {
-        // Fetch todo tasks and update the state
-        getTodoTasks()
-            .then(response => {
-                console.log("API Response:", response.data); // Log the response data
+        getTodoTasks().then(response => {
+                console.log("API Response:", response.data);
                 dispatch(resetTodoList(response.data));
             })
             .catch(error => {
