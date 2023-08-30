@@ -5,8 +5,9 @@ const todoSlice = createSlice({
     initialState: { task: [] }, 
     reducers: {
         resetTodoList: (state, action) => {
-            state.todoList = action.payload;
-         },
+            state.task = action.payload;
+        },
+        
         updateTodoList: (state, action) => {
             const newId = state.task.length + 1;
             const newTodo = {
@@ -28,5 +29,5 @@ const todoSlice = createSlice({
     },
 });
 
-export const { updateTodoList, toggleTodoStatus, deleteTodoList } = todoSlice.actions;
+export const { updateTodoList, toggleTodoStatus, deleteTodoList,resetTodoList } = todoSlice.actions;
 export default todoSlice.reducer;
