@@ -24,7 +24,7 @@ const TodoList = (props) => {
             <h2 className="todoListTitle"> Todo List</h2>
             <div className="todoListComponents">
                 <TodoGroup todos={todos} />
-                {!props.isDone &&<TodoGenerator />}
+                {!props.isDone && <TodoGenerator />}
             </div>
         </div>
     );

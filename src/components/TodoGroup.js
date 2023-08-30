@@ -6,7 +6,7 @@ const TodoGroup = ({ todos }) => {
     const filteredTodos = todos.isDone ? todos.filter(task => task.done) : todos;
     return (
         <ul className="todoGroup">
-            {todos.map((todotask) => (
+            {filteredTodos.map((todotask) => (
                 <TodoItem key={todotask.id} todo={todotask} />
             ))}
         </ul>
