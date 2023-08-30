@@ -9,6 +9,9 @@
     justify-content: space-between;
     max-width: 700px;
 }
+.todoItem span:hover {
+   background-color: rgb(225, 225, 72);
+}
 
 .deleteButton {
     border: none;
