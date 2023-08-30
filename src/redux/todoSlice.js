@@ -7,18 +7,18 @@ const todoSlice = createSlice({
     ],
     reducers: {
         updateTodoList: (state, action) => {
-            const id = state.length + 1;
+            const Id = state.length + 1;
             const newTodo = {
-                Id:id,
+                id:Id,
                 task: [
-                  {  Id: 1,
+                  {  id: Id,
                     text: action.payload.text,
                     done: false,}]
             };
             state.push(newTodo);
         },
         toggleTodoStatus: (state, action) => {
-            const todo = state.find((item) => item.task[0].id === action.payload);
+            const todo = state.find((item) => item.id === action.payload);
             if (todo) {
                 todo.task[0].done = !todo.task[0].done;
             }
