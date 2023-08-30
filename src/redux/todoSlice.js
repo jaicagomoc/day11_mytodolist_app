@@ -20,11 +20,11 @@ const todoSlice = createSlice({
         toggleTodoStatus: (state, action) => {
             const todo = state.find((item) => item.id === action.payload);
             if (todo) {
-                todo.task[0].done = !todo.task[0].done;
+                todo.done = !todo.done;
             }
         },
         deleteTodoList: (state, action) => {
-            return state.filter((todo) => todo.task[0].id !== action.payload);
+            return state.filter((todo) => todo.id !== action.payload);
         }
     },
 });

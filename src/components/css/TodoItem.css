@@ -6,9 +6,8 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     max-width: 700px;
-<<<<<<< HEAD
 }
 .todoItem span:hover {
    background-color: rgb(225, 225, 72);
@@ -24,6 +23,4 @@
     border: 1px solid rgb(87, 84, 84);
     border-radius: 5px;
     background-color: #b53131;
-=======
->>>>>>> parent of 1187054 (feat: functional deleteTodo)
 }
