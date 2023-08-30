@@ -7,7 +7,11 @@ const TodoItem = ({ todo }) => {
     const dispatch = useDispatch();
 
     const handleToggleDone = () => {
-        dispatch(toggleTodoStatus(todo.task.id));
+        if(todo.isDone){
+            console.log("go to detail page");
+        }else{
+            dispatch(toggleTodoStatus(todo.task.id));
+        }
     };
 
     const todoStyle = {

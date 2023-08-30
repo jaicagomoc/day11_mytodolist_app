@@ -3,10 +3,12 @@ import "./css/TodoGroup.css";
 import TodoItem from "./TodoItem";
 
 const TodoGroup = ({ todos }) => {
+    const filteredTodos = todos.isDone ? todos.filter(task => task.done) : todos;
+
     return (
         <ul className="todoGroup">
-            {todos.map((todo) => (
-                <TodoItem key={todo.task.id} todo={todo} />
+            {filteredTodos.map((todotask) => (
+                <TodoItem key={todotask.task.id} todo={todotask} isDone={todos.isDone}/>
             ))}
         </ul>
     );
