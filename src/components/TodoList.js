@@ -12,11 +12,9 @@ const TodoList = (props) => {
 
     useEffect(() => {
         getTodoTasks().then(response => {
-                console.log("API Response:", response.data);
                 dispatch(resetTodoList(response.data));
             })
             .catch(error => {
-                console.error("Error fetching todo tasks:", error);
             });
     }, [dispatch]);
     return (
